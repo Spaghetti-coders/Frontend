@@ -109,7 +109,7 @@ export class CircleChart extends Component {
           type="radialBar"
           height="300"
         />
-        <div className="grade text-center" style={{ marginTop: "-55px" }}>
+        <div className="grade text-center" style={{ marginTop: "-45px" }}>
           <p className="prcentage_part">Good : 80%</p>
           <p className="prcentage_part">Passive : 80%</p>
           <p className="prcentage_part">Something : 80%</p>

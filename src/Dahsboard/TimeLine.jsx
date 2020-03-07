@@ -9,12 +9,12 @@ export class TimeLine extends Component {
     this.state = {
       series: [
         {
-          name: "Website Blog",
+          name: "Rating",
           type: "column",
           data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3]
         },
         {
-          name: "Social Media",
+          name: "Rank",
           type: "line",
           data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3]
         }
@@ -31,7 +31,7 @@ export class TimeLine extends Component {
         },
 
         title: {
-          text: "Traffic Sources"
+          text: "Ranking Source"
         },
         dataLabels: {
           enabled: true,
