@@ -5,23 +5,63 @@ import TimeLine from "./TimeLine";
 import Recommend from "./Recommend";
 
 export class Main extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      filter: ""
+    };
+  }
+
+  async onChange(e) {
+    await this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
   render() {
     return (
-      <div className="" style={{ marginTop: "80px" }}>
+      <div>
         <div className="row" style={{ width: "100%" }}>
-          <div className="col-md-4">
-            <CircleChart />
-          </div>
-          <div className="col-md-8">
-            <Rating />
-          </div>
-        </div>
+          <ul className="navbar-nav mr-auto ">
+            <li className="nav-item  ">
+              <h4 style={{ left: " 30px", position: "relative" }}>
+                Hi There !!
+              </h4>
+            </li>
+          </ul>
 
-        <div className="time_line">
-          <TimeLine />
+          <ul className="navbar-nav ml-auto ">
+            <li className="nav-item  ">
+              <select className="form-control" id="donn">
+                <option value="" disabled hidden selected>
+                  Filter
+                </option>
+                <option value="client">Client</option>
+                <option value="compnay">Company</option>
+                <option value="project">Project</option>
+                <option value="general">General</option>
+                {/* <option value=""></option> */}
+              </select>
+            </li>
+          </ul>
         </div>
-        <div className="radar_line">
-          <Recommend />
+        <div className="" style={{ marginTop: "20px" }}>
+          <div className="row" style={{ width: "100%" }}>
+            <div className="col-md-4">
+              <CircleChart />
+            </div>
+            <div className="col-md-8">
+              <Rating />
+            </div>
+          </div>
+
+          <div className="time_line">
+            <TimeLine />
+          </div>
+          <div className="radar_line">
+            <Recommend />
+          </div>
         </div>
       </div>
     );

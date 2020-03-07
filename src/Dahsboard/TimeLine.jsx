@@ -9,29 +9,42 @@ export class TimeLine extends Component {
     this.state = {
       series: [
         {
-          name: "Rating",
-          type: "column",
-          data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3]
-        },
-        {
-          name: "Rank",
-          type: "line",
-          data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3]
+          name: "Evalution",
+
+          data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3, 9.3]
         }
+        // {
+        //   name: "Rank",
+        //   type: "line",
+        //   data: [10, 6.4, 3.6, 4.7, 9.4, 3.6, 6.6, 7.2, 1.6, 2.6, 8.3]
+        // }
       ],
       options: {
         chart: {
           height: 350,
-          type: "line"
+          type: "bar"
         },
-        colors: ["#66B73E", "#E7E800"],
 
         stroke: {
           width: [0, 4]
         },
+        colors: [
+          "#66B73E",
+          "#EBDD00",
+          "#EC7200",
+          "#F1AA08",
+          "#B2CF00",
+          "#EC7200",
+          "#EBDD00",
+          "#E7E800",
+          "#D0241F",
+          "#EB5408",
+          "#C5D900",
+          "#B2CF00"
+        ],
 
         title: {
-          text: "Ranking Source",
+          text: "Evalution: Month",
           align: "center",
           style: {
             fontSize: "20px",
@@ -40,6 +53,11 @@ export class TimeLine extends Component {
         },
         dataLabels: {
           enabled: true,
+          position: "top",
+          style: {
+            colors: ["#B2CF00"]
+          },
+          offsetX: 30,
           enabledOnSeries: [1]
         },
 
@@ -60,9 +78,9 @@ export class TimeLine extends Component {
         xaxis: {
           type: "category",
           title: {
-            text: "Rating Number",
+            text: "Month",
             style: {
-              fontSize: "10px",
+              fontSize: "14px",
               color: "#8D8D90"
             }
           }
@@ -79,13 +97,7 @@ export class TimeLine extends Component {
         yaxis: [
           {
             title: {
-              text: "Website Blog"
-            }
-          },
-          {
-            opposite: true,
-            title: {
-              text: "Social Media"
+              text: "Score"
             }
           }
         ]
@@ -100,7 +112,7 @@ export class TimeLine extends Component {
           //   style={{ marginTop: "22px" }}
           options={this.state.options}
           series={this.state.series}
-          type="line"
+          type="bar"
           height="390"
         />
       </div>

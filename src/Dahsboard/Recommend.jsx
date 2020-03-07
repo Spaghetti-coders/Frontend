@@ -9,17 +9,18 @@ export class Recommend extends Component {
       series: [
         {
           name: "Communication",
-          data: [80, 50, 30, 40, 100, 20]
-        },
-        {
-          name: "Deadlines",
-          data: [20, 30, 40, 80, 20, 80]
-        },
-        {
-          name: "Business",
-          data: [44, 76, 78, 13, 43, 10]
+          data: [100, 50, 30]
         }
+        // {
+        //   name: "Deadlines",
+        //   data: [20, 30, 40, 80, 20, 80]
+        // },
+        // {
+        //   name: "Business",
+        //   data: [44, 76, 78, 13, 43, 10]
+        // }
       ],
+
       options: {
         chart: {
           height: 350,
@@ -31,6 +32,7 @@ export class Recommend extends Component {
             top: 1
           }
         },
+
         title: {
           text: "Recommendation",
           align: "center",
@@ -57,9 +59,9 @@ export class Recommend extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: "20px" }}>
+      <div style={{ marginTop: "25px" }}>
         <div className="row" style={{ width: "100%" }}>
-          <div className="col-md-5 box">
+          <div className="col-md-5 box comment-tab11">
             <Chart
               options={this.state.options}
               series={this.state.series}
@@ -67,7 +69,67 @@ export class Recommend extends Component {
               height="400"
             />
           </div>
-          <div className="col-md-7"></div>
+          <div className="col-md-7 comment-tab">
+            <div className="box" style={{ width: "100%" }}>
+              <h5
+                className="font-weight-bold text-center"
+                style={{ marginTop: "30px" }}
+              >
+                <span className="float-left">
+                  <select className="form-control " id="donn">
+                    <option value="" disabled hidden selected>
+                      Filter comment
+                    </option>
+                    <option value="client">General</option>
+                    <option value="compnay">Timing</option>
+                    <option value="project">Communication</option>
+                    <option value="general">Business</option>
+                  </select>
+                </span>
+                Recommend Comments
+              </h5>
+
+              <div className="comment ">
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 9</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 9</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 7</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 6</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 5</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 4</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+                <p className="box text-left" style={{ padding: "15px" }}>
+                  <span style={{ opacity: "0.7" }}>March 3</span> &nbsp; |
+                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

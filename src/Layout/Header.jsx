@@ -17,46 +17,49 @@ class Header extends Component {
   render() {
     return (
       <div className="container1">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
-          <a
-            className="navbar-brand"
-            href="/"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            Logo
-          </a>
-          <button
-            className="navbar-toggler font-weight-bold text-white  "
-            style={{ background: "#b71c1c", padding: "2px", width: "70px" }}
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon  "></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item  ">
-                <a className="nav-link  login_btn text-dark" href="# ">
-                  Create
-                </a>
-              </li>
+        {localStorage.getItem("Token") ? (
+          <nav className="navbar navbar-expand-lg navbar-dark  fixed top-header">
+            <a
+              className="navbar-brand"
+              href="/"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Logo
+            </a>
+            <button
+              className="navbar-toggler font-weight-bold text-white  "
+              style={{ background: "#b71c1c", padding: "2px", width: "70px" }}
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon  "></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item  ">
+                  <a className="nav-link  login_btn text-dark" href="# ">
+                    Create
+                  </a>
+                </li>
 
-              <li className="nav-item  ">
-                <a className="nav-link  login_btn text-dark" href="# ">
-                  Automate
-                </a>
-              </li>
-            </ul>
+                <li className="nav-item  ">
+                  <a className="nav-link  login_btn text-dark" href="# ">
+                    Automate
+                  </a>
+                </li>
+              </ul>
 
-            {localStorage.getItem("Token") && (
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item  ">
                   <a
@@ -72,38 +75,11 @@ class Header extends Component {
                   </a>
                 </li>
               </ul>
-            )}
-
-            {localStorage.getItem("Token") ? (
-              ""
-            ) : (
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item  ">
-                  <a
-                    className="nav-link  login_btn text-dark"
-                    href="#c "
-                    style={{
-                      color: "rgb(183, 28, 28, 0.8)",
-                      marginRight: "0px"
-                    }}
-                  >
-                    Login
-                  </a>
-                </li>
-
-                <li className="nav-item  ">
-                  <a
-                    className="nav-link  text-dark"
-                    href="#  "
-                    rel="modal:open"
-                  >
-                    Signup
-                  </a>
-                </li>
-              </ul>
-            )}
-          </div>
-        </nav>
+            </div>
+          </nav>
+        ) : (
+          ""
+        )}
       </div>
     );
   }

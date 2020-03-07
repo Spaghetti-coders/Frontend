@@ -19,6 +19,14 @@ export class CircleChart extends Component {
             show: true
           }
         },
+        title: {
+          text: "General",
+          align: "center",
+          style: {
+            fontSize: "20px",
+            color: "black"
+          }
+        },
         plotOptions: {
           radialBar: {
             startAngle: -135,
@@ -58,7 +66,7 @@ export class CircleChart extends Component {
             dataLabels: {
               show: true,
               name: {
-                offsetY: 60,
+                offsetY: 40,
                 show: true,
                 color: "#66B73E",
                 position: "bottom",
@@ -69,6 +77,7 @@ export class CircleChart extends Component {
                   return parseInt(val) / 10;
                 },
                 color: "#111",
+                offsetY: -10,
                 marginTop: "10px",
                 fontSize: "66px",
 
@@ -95,7 +104,7 @@ export class CircleChart extends Component {
         },
         labels: ["NPS score"]
       },
-      series: [75]
+      series: [51]
     };
   }
 
