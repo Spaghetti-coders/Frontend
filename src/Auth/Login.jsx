@@ -73,7 +73,7 @@ class Login extends Component {
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                  <h5 className="label">Username</h5>
+                  <h5 style={{ top: "-5px" }}>Username</h5>
                   <input
                     type="text"
                     class="input"
@@ -89,7 +89,7 @@ class Login extends Component {
                 </div>
 
                 <div class="div">
-                  <h5 className="label">Password</h5>
+                  <h5 style={{ top: "-5px" }}>Password</h5>
                   <input
                     class="input"
                     name="password"
