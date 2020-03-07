@@ -189,6 +189,22 @@ a:hover {
   background-position: right;
 }
 
+/*    Survey       */
+.square {
+  border: 1px solid black;
+  /* height: 100px;
+  width: 130px; */
+}
+
+.square2 {
+  justify-content: center;
+  padding: 20px;
+  height: 500px;
+  width: 200px;
+  background-color: #32be8f;
+}
+/* ************* */
+
 @media screen and (max-width: 1050px) {
   .container {
     grid-gap: 5rem;
