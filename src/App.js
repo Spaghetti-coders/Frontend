@@ -4,6 +4,8 @@ import { Redirect } from "react-router";
 import Main from "./Dahsboard/Main";
 import Login from "./Auth/Login";
 import Header from "./Layout/Header";
+import Review from "./Layout/Review";
+import Lol from "./Layout/Lol";
 import "./App.css";
 
 const PrivateRoute = ({ component: Component, ...props }) => {
@@ -33,7 +35,10 @@ class App extends Component {
           <Header />
           <Switch>
             <PrivateRoute path="/dashboard/" component={Main} />
+            <PrivateRoute path="/dashboard/" component={Main} />
             <Route exact path="/" component={Login} />
+            <Route path="/survey/" component={Review} />
+            <Route path="/lol/" component={Lol} />
           </Switch>
         </BrowserRouter>
       </Suspense>
