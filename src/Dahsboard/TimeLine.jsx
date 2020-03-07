@@ -31,7 +31,12 @@ export class TimeLine extends Component {
         },
 
         title: {
-          text: "Ranking Source"
+          text: "Ranking Source",
+          align: "center",
+          style: {
+            fontSize: "20px",
+            color: "black"
+          }
         },
         dataLabels: {
           enabled: true,

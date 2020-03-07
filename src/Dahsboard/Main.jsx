@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CircleChart from "./CircleChart";
 import Rating from "./Rating";
 import TimeLine from "./TimeLine";
+import Recommend from "./Recommend";
 
 export class Main extends Component {
   render() {
@@ -18,6 +19,9 @@ export class Main extends Component {
 
         <div className="time_line">
           <TimeLine />
+        </div>
+        <div className="radar_line">
+          <Recommend />
         </div>
       </div>
     );
