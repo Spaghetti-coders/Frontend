@@ -7,35 +7,13 @@ import Swal from "sweetalert2";
 import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
-const CssTextField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "#1B1B23",
-      opacity: "0.6",
-      fontSize: "15px",
-      letterSpacing: "0.2px"
-    },
-    "& label": {
-      marginLeft: "5px"
-    },
-
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "#B71C1C"
-    },
-    "& .MuiInput-underline:before": {
-      borderBottomColor: "#B71C1C"
-    },
-    "& .MuiInput-underline:hover": {
-      borderBottomColor: "#B71C1C"
-    }
-  }
-})(TextField);
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: ""
+      username: "",
+      password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -43,17 +21,34 @@ class Login extends Component {
   handleSubmit(e) {
     const token = "tjdhd96826492749026269296428692904277272";
     e.preventDefault();
+    const { username, password } = this.state;
 
-    Swal.fire({
-      title: "Log in",
-      icon: "success",
-      text: "You Successfully loggedin",
-      showConfirmButton: false,
-      timer: 3000
+    if (username === "admin" && password === "admin") {
+      Swal.fire({
+        title: "Login",
+        icon: "success",
+        text: "You Successfully loggedin",
+        showConfirmButton: false,
+        timer: 3000
+      });
+      localStorage.setItem("Token", token);
+      this.props.history.push("/dashboard/");
+      window.location.reload(1);
+    } else {
+      Swal.fire({
+        title: "Login Error",
+        icon: "error",
+        text: "Check your email and password !!",
+        showConfirmButton: false,
+        timer: 3000
+      });
+    }
+  }
+
+  async onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
     });
-    localStorage.setItem("Token", token);
-    this.props.history.push("/dashboard/");
-    window.location.reload(1);
   }
 
   render() {
@@ -79,7 +74,7 @@ class Login extends Component {
                     class="input"
                     name="username"
                     // value={this.state.username}
-                    // onChange={this.handleChange}
+                    onChange={this.onChange.bind(this)}
                   />
                 </div>
               </div>
@@ -94,7 +89,7 @@ class Login extends Component {
                     class="input"
                     name="password"
                     // value={this.state.password}
-                    // onChange={this.handleChange}
+                    onChange={this.onChange.bind(this)}
                     type="password"
                   />
                 </div>
