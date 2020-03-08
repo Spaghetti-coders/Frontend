@@ -67,9 +67,9 @@ export class Main extends Component {
             </div>
           </div>
 
-          <div className="time_line">
+          {/* <div className="time_line">
             <TimeLine />
-          </div>
+          </div> */}
           <div className="radar_line">
             <Recommend />
           </div>

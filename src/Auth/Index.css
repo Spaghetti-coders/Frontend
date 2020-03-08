@@ -189,6 +189,42 @@ a:hover {
   background-position: right;
 }
 
+/*    Survey       */
+
+.row {
+  position: relative;
+}
+
+.square {
+  position: absolute;
+ width: 250px;
+ height: 160px;
+}
+
+.titleBlank {
+ position: absolute;
+ top: 180px;
+}
+
+.fa-plus {
+  width: 50px;
+  height: auto;
+}
+
+.card{
+  background-color: white;
+}
+
+.card:hover{
+  background-color: rgb(240, 239, 239);
+}
+
+.center {
+  margin: auto;
+  width: 35%;
+}
+/* ************* */
+
 @media screen and (max-width: 1050px) {
   .container {
     grid-gap: 5rem;
