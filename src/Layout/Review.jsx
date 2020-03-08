@@ -69,9 +69,9 @@ export class Review extends Component {
         });
         this.props.history.push("/survey//");
         Swal.fire({
-          title: "Survey Submitted",
+          title: "Ankieta została wypełniona",
           icon: "success",
-          text: "Thank you for your valuable time!!",
+          text: "Dziękujemy za poświęcony czas! Dzięki Tobie będziemy lepsi.",
           showConfirmButton: false,
           timer: 2000
         });
