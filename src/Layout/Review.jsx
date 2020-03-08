@@ -46,7 +46,7 @@ export class Review extends Component {
 
     axios({
       method: "post",
-      url: `http://localhost:8000/api/1/answer/overall/`,
+      url: `https://polisbook.herokuapp.com/api/1/answer/overall/`,
 
       data
     })

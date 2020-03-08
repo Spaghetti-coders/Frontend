@@ -106,4 +106,6 @@ footer {
 .Review_main {
   margin: 0 auto;
   max-width: 900px;
+  height: 100vh;
+  overflow-y: scroll;
 }
