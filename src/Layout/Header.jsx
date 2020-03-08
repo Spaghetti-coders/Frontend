@@ -22,7 +22,7 @@ class Header extends Component {
           <nav className="navbar navbar-expand-lg navbar-dark  fixed top-header">
             <a
               className="navbar-brand logo_text font-weight-bolder"
-              href="/"
+              href="/dashboard/"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"

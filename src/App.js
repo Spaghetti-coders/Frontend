@@ -36,11 +36,11 @@ class App extends Component {
           <Header />
           <Switch>
             <PrivateRoute path="/dashboard/" component={Main} />
-            <PrivateRoute path="/dashboard/" component={Main} />
+            {/* <PrivateRoute path="/dashboard/" component={Main} /> */}
             <Route exact path="/" component={Login} />
             <Route path="/survey/" component={Review} />
             <Route path="/lol/" component={Lol} />
-            <Route path="/CreateSurvey/" component={Create} />
+            <PrivateRoute path="/CreateSurvey/" component={Create} />
           </Switch>
         </BrowserRouter>
       </Suspense>
