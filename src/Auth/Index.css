@@ -190,18 +190,38 @@ a:hover {
 }
 
 /*    Survey       */
-.square {
-  border: 1px solid black;
-  /* height: 100px;
-  width: 130px; */
+
+.row {
+  position: relative;
 }
 
-.square2 {
-  justify-content: center;
-  padding: 20px;
-  height: 500px;
-  width: 200px;
-  background-color: #32be8f;
+.square {
+  position: absolute;
+ width: 250px;
+ height: 160px;
+}
+
+.titleBlank {
+ position: absolute;
+ top: 180px;
+}
+
+.fa-plus {
+  width: 50px;
+  height: auto;
+}
+
+.card{
+  background-color: white;
+}
+
+.card:hover{
+  background-color: rgb(240, 239, 239);
+}
+
+.center {
+  margin: auto;
+  width: 35%;
 }
 /* ************* */
 

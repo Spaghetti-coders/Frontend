@@ -3,6 +3,8 @@ import CircleChart from "./CircleChart";
 import Rating from "./Rating";
 import TimeLine from "./TimeLine";
 import Recommend from "./Recommend";
+import Grouped from "./Group";
+import Area from "./Area";
 
 export class Main extends Component {
   constructor(props) {
@@ -56,9 +58,18 @@ export class Main extends Component {
             </div>
           </div>
 
-          <div className="time_line">
-            <TimeLine />
+          <div className="row" style={{ width: "100%" }}>
+            <div className="col-md-7">
+              <Grouped />
+            </div>
+            <div className="col-md-5">
+              <Area />
+            </div>
           </div>
+
+          {/* <div className="time_line">
+            <TimeLine />
+          </div> */}
           <div className="radar_line">
             <Recommend />
           </div>

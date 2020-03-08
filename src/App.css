@@ -12,6 +12,10 @@
   font-size: 20px;
   margin-top: -10px;
 }
+#p {
+  position: relative;
+  top: 20px;
+}
 .top-header {
   background-color: rgb(19, 18, 18, 0.2);
 }
@@ -23,7 +27,7 @@
   height: 380px;
   overflow: hidden;
 }
-
+/* 
 select.minimal {
   background-image: linear-gradient(
       45deg,
@@ -56,7 +60,7 @@ select.minimal:focus {
   background-repeat: no-repeat;
 
   outline: 0;
-}
+} */
 
 #donn {
   border: 3px solid white;
@@ -68,9 +72,24 @@ select.minimal:focus {
   border-bottom: 2px solid #059162;
 }
 
+/* label span:first-of-type {
+  position: relative;
+  left: -27px;
+  font-size: 14px;
+  color: #1fbed6;
+  padding: 10px;
+  height: 50px;
+  width: 190px;
+} */
+
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+
+.ff {
+  height: 30px;
+  width: 30px;
 }
 
 select {
