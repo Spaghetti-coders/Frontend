@@ -302,6 +302,13 @@ export class Review extends Component {
               this.state.rating === "5" ||
               this.state.rating === "6" ? (
                 <div className="boxed">
+                  <h4
+                    className="text-center"
+                    style={{ marginBottom: "50px", marginTop: "50px" }}
+                  >
+                    Bardzo nam przykro że nie spełniliśmy twoich wszystkich
+                    oczekiwań. Co wpłynęło na twoją ocenę?
+                  </h4>
                   <div
                     className="row text-center"
                     style={{
@@ -454,10 +461,6 @@ export class Review extends Component {
               this.state.rating === "7" ||
               this.state.rating === "8" ? (
                 <div class="summayr  justify-content-md-center text-center">
-                  <h4 style={{ marginBottom: "50px", marginTop: "50px" }}>
-                    Bardzo nam przykro że nie spełniliśmy twoich wszystkich
-                    oczekiwań. Co wpłynęło na twoją ocenę?
-                  </h4>
                   <div
                     className="row"
                     style={{ width: "100%", marginTop: "30px" }}

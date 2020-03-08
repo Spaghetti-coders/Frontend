@@ -101,7 +101,7 @@ class Rating extends Component {
       series: [
         {
           name: "Ratiings",
-          data: [10, 30, 45, 35, 25, 33, 85, 90, 59, 63, 86]
+          data: [10, 20, 39, 35, 25, 33, 85, 90, 59, 83, 93]
         }
       ]
     };
