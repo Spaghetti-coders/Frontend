@@ -40,6 +40,7 @@ export class Review extends Component {
       question2: this.state.question2,
       question3: this.state.question3,
       question4: this.state.question4,
+      problem: this.state.problem,
       rating: this.state.rating,
       value: this.state.rating
     };
