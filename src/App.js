@@ -7,7 +7,7 @@ import Header from "./Layout/Header";
 import Review from "./Layout/Review";
 import Lol from "./Layout/Lol";
 import "./App.css";
-import Create from "./CreateSurvey/Create"
+import Create from "./CreateSurvey/Create";
 
 const PrivateRoute = ({ component: Component, ...props }) => {
   return (
@@ -17,13 +17,13 @@ const PrivateRoute = ({ component: Component, ...props }) => {
         localStorage.getItem("Token") ? (
           <Component {...innerProps} />
         ) : (
-            <Redirect
-              to={{
-                pathname: "/",
-                state: { from: props.location }
-              }}
-            />
-          )
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { from: props.location }
+            }}
+          />
+        )
       }
     />
   );

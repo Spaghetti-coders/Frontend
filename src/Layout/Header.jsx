@@ -54,7 +54,10 @@ class Header extends Component {
             >
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item  ">
-                  <a className="nav-link  login_btn text-dark" href="# ">
+                  <a
+                    className="nav-link  login_btn text-dark"
+                    href="/CreateSurvey/"
+                  >
                     Create
                   </a>
                 </li>

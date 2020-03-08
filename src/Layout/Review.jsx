@@ -102,7 +102,7 @@ export class Review extends Component {
             <div>
               <h4 className="text-center" style={{ marginTop: "10px" }}>
                 Na ile prawdopodobne jest, że polecisz nasz event (GLH) swoim
-                znajomym? (it is the question to NPS)
+                znajomym?
               </h4>
               <div className="here justify-content-md-center text-center">
                 <input
@@ -119,7 +119,7 @@ export class Review extends Component {
                   id="p"
                   htmlFor="r1"
                   class="btn btn-circle btn-xl"
-                  style={{ background: "#CCFF00", margin: "5px" }}
+                  style={{ background: "#FF3300", margin: "5px" }}
                 >
                   1
                 </label>
@@ -329,27 +329,30 @@ export class Review extends Component {
                       <label htmlFor="android">Lokalizacja</label>
                     </div>
 
-                    <div className="col-sm-2 jj">
+                    <div className="col-md-2 jj">
                       <input
                         type="radio"
-                        id="ios"
-                        name="problem"
+                        id="android1"
+                        name="Komunikacja"
                         onChange={this.onChange.bind(this)}
-                        value="Komunikacja"
+                        value="Android-Development"
                       />
-                      <label htmlFor="ios">Komunikacja </label>
+
+                      <label htmlFor="android1">Komunikacja</label>
                     </div>
 
                     <div className="col-md-2 jj">
                       <input
                         type="radio"
-                        id="timing"
-                        name="problem"
+                        id="android11"
+                        name="Posiliki"
                         onChange={this.onChange.bind(this)}
-                        value="Posiłki"
+                        value="Android-Development"
                       />
-                      <label htmlFor="timing">Posiłki </label>
+
+                      <label htmlFor="android11">Posiłki</label>
                     </div>
+
                     <div className="col-md-2 jj">
                       <input
                         type="radio"
@@ -377,7 +380,7 @@ export class Review extends Component {
                           id="other"
                           onChange={this.onChange.bind(this)}
                           name="problem"
-                          placeholder="Other Problem"
+                          placeholder="Jakie"
                           style={{ width: "140px" }}
                           className="form-control"
                         />
