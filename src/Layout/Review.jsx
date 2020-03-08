@@ -13,6 +13,8 @@ export class Review extends Component {
       question3: null,
       question4: null,
       problem: "",
+      question78: "",
+      question9: "",
 
       // questions5: null,
       rating: null,
@@ -42,7 +44,9 @@ export class Review extends Component {
       question4: this.state.question4,
       problem: this.state.problem,
       rating: this.state.rating,
-      value: this.state.rating
+      value: this.state.rating,
+      question78: this.state.question78,
+      question9: this.state.question9
     };
 
     axios({
@@ -59,7 +63,9 @@ export class Review extends Component {
           question4: null,
           problem: "",
           rating: null,
-          value: ""
+          value: "",
+          question78: "",
+          question9: ""
         });
         this.props.history.push("/survey//");
         Swal.fire({
@@ -94,6 +100,10 @@ export class Review extends Component {
         <div className="box" style={{ paddingBottom: "40px" }}>
           <form style={{ width: "100%" }} onSubmit={this.handleSubmit}>
             <div>
+              <h4 className="text-center" style={{ marginTop: "10px" }}>
+                Na ile prawdopodobne jest, że polecisz nasz event (GLH) swoim
+                znajomym? (it is the question to NPS)
+              </h4>
               <div className="here justify-content-md-center text-center">
                 <input
                   type="radio"
@@ -290,20 +300,173 @@ export class Review extends Component {
               this.state.rating === "3" ||
               this.state.rating === "4" ||
               this.state.rating === "5" ||
+              this.state.rating === "6" ? (
+                <div className="boxed">
+                  <div
+                    className="row text-center"
+                    style={{
+                      width: "100%",
+                      marginTop: "60px",
+                      paddingLeft: "50px"
+                    }}
+                  >
+                    <div className="col-sm-2 jj">
+                      <input
+                        type="radio"
+                        id="android"
+                        name="Lokalizacja"
+                        onChange={this.onChange.bind(this)}
+                        value="Android Development"
+                      />
+
+                      <label htmlFor="android">Lokalizacja</label>
+                    </div>
+
+                    <div className="col-sm-2 jj">
+                      <input
+                        type="radio"
+                        id="ios"
+                        name="problem"
+                        onChange={this.onChange.bind(this)}
+                        value="Komunikacja"
+                      />
+                      <label htmlFor="ios">Komunikacja </label>
+                    </div>
+
+                    <div className="col-md-2 jj">
+                      <input
+                        type="radio"
+                        id="timing"
+                        name="problem"
+                        onChange={this.onChange.bind(this)}
+                        value="Posiłki"
+                      />
+                      <label htmlFor="timing">Posiłki </label>
+                    </div>
+                    <div className="col-md-2 jj">
+                      <input
+                        type="radio"
+                        id="quantity"
+                        name="problem"
+                        onChange={this.onChange.bind(this)}
+                        value="Atmosfera"
+                        style={{ padding: "30px" }}
+                      />
+                      <label htmlFor="quantity">Atmosfera </label>
+                    </div>
+
+                    <div className="col-md-2 jj">
+                      <input
+                        type="radio"
+                        id="other"
+                        name="Other"
+                        value="Inne"
+                        onClick={this.toggle.bind(this)}
+                      />
+                      <label htmlFor="other">Inne </label>
+                      {this.state.isHidden && (
+                        <input
+                          type="text"
+                          id="other"
+                          onChange={this.onChange.bind(this)}
+                          name="problem"
+                          placeholder="Other Problem"
+                          style={{ width: "140px" }}
+                          className="form-control"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {this.state.rating === "9" ? (
+                <div className="7-8">
+                  <h4 className="text-center" style={{ marginTop: "50px" }}>
+                    {" "}
+                    Jaką jedną rzecz możemy zrobić żeby GLH było idealne?
+                  </h4>
+                  <div>
+                    <input
+                      style={{
+                        marginTop: "10px",
+                        border: "2px solid white",
+                        borderBottom: "1px solid gray"
+                      }}
+                      type="text"
+                      name="question9"
+                      className="form-control first"
+                      placeholder="Typing ..."
+                      onChange={this.onChange.bind(this)}
+                    />
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {this.state.rating === "10" ? (
+                <div className="7-8">
+                  <h4 className="text-center" style={{ marginTop: "70px" }}>
+                    {" "}
+                    Super! Dziękujemy za Twoją gotowość polecania nas swoim
+                    znajomym!
+                  </h4>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {this.state.rating === "7" || this.state.rating === "8" ? (
+                <div className="7-8">
+                  <h4 className="text-center" style={{ marginTop: "50px" }}>
+                    {" "}
+                    Jaka jest jedna rzecz, którą powinniśmy poprawić w
+                    przyszłości
+                  </h4>
+                  <div>
+                    <input
+                      style={{
+                        marginTop: "10px",
+                        border: "2px solid white",
+                        borderBottom: "1px solid gray"
+                      }}
+                      type="text"
+                      name="question78"
+                      className="form-control first"
+                      placeholder="Typing ..."
+                      onChange={this.onChange.bind(this)}
+                    />
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {this.state.rating === "1" ||
+              this.state.rating === "2" ||
+              this.state.rating === "3" ||
+              this.state.rating === "4" ||
+              this.state.rating === "5" ||
               this.state.rating === "6" ||
               this.state.rating === "7" ||
-              this.state.rating === "8" ||
-              this.state.rating === "9" ? (
+              this.state.rating === "8" ? (
                 <div class="summayr  justify-content-md-center text-center">
-                  <h3 style={{ marginBottom: "20px", marginTop: "30px" }}>
-                    Question
-                  </h3>
+                  <h4 style={{ marginBottom: "50px", marginTop: "50px" }}>
+                    Bardzo nam przykro że nie spełniliśmy twoich wszystkich
+                    oczekiwań. Co wpłynęło na twoją ocenę?
+                  </h4>
                   <div
                     className="row"
                     style={{ width: "100%", marginTop: "30px" }}
                   >
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
-                      <h5>Theere is pur first question is this</h5>
+                      <h5>
+                        Jak oceniasz lokalizację, gdzie 1 to zła a 5 to bardzo
+                        dobra
+                      </h5>
                     </div>
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
                       <div className="row gond">
@@ -356,7 +519,10 @@ export class Review extends Component {
                     </div>
 
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
-                      <h5>Theere is pur first question is this</h5>
+                      <h5>
+                        Jak oceniasz naszą komunikację, gdzie 1 to zła, a 5 to
+                        bardzo dobra
+                      </h5>
                     </div>
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
                       <div className="row gond">
@@ -409,7 +575,10 @@ export class Review extends Component {
                     </div>
 
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
-                      <h5>Theere is pur first question is this</h5>
+                      <h5>
+                        Jak oceniasz jakość posiłki, gdzie 1 to niesmaczne a 5
+                        bardzo dobre
+                      </h5>
                     </div>
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
                       <div className="row gond">
@@ -462,7 +631,10 @@ export class Review extends Component {
                     </div>
 
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
-                      <h5>Theere is pur first question is this</h5>
+                      <h5>
+                        jak oceniasz atmosferę, gdzie 1 to zła a 5 to bardzo
+                        dobra
+                      </h5>
                     </div>
                     <div className="col-md-6" style={{ marginTop: "10px" }}>
                       <div className="row gond">
@@ -513,93 +685,6 @@ export class Review extends Component {
                           <span>1</span>
                         </label>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
-
-              {this.state.rating === "1" ||
-              this.state.rating === "2" ||
-              this.state.rating === "3" ||
-              this.state.rating === "4" ||
-              this.state.rating === "5" ||
-              this.state.rating === "6" ? (
-                <div className="boxed">
-                  <div
-                    className="row text-center"
-                    style={{
-                      width: "100%",
-                      marginTop: "40px",
-                      paddingLeft: "50px"
-                    }}
-                  >
-                    <div className="col-sm-2 jj">
-                      <input
-                        type="radio"
-                        id="android"
-                        name="problem"
-                        onChange={this.onChange.bind(this)}
-                        value="Android Development"
-                      />
-
-                      <label htmlFor="android">Communication</label>
-                    </div>
-
-                    <div className="col-sm-2 jj">
-                      <input
-                        type="radio"
-                        id="ios"
-                        name="problem"
-                        onChange={this.onChange.bind(this)}
-                        value="Space"
-                      />
-                      <label htmlFor="ios">Space </label>
-                    </div>
-
-                    <div className="col-md-2 jj">
-                      <input
-                        type="radio"
-                        id="timing"
-                        name="problem"
-                        onChange={this.onChange.bind(this)}
-                        value="Timing"
-                      />
-                      <label htmlFor="timing">Timing </label>
-                    </div>
-                    <div className="col-md-2 jj">
-                      <input
-                        type="radio"
-                        id="quantity"
-                        name="problem"
-                        onChange={this.onChange.bind(this)}
-                        value="Quantity"
-                        style={{ padding: "30px" }}
-                      />
-                      <label htmlFor="quantity">Quantity </label>
-                    </div>
-
-                    <div className="col-md-2 jj">
-                      <input
-                        type="radio"
-                        id="other"
-                        name="Other"
-                        value="Space"
-                        onClick={this.toggle.bind(this)}
-                      />
-                      <label htmlFor="other">Other </label>
-                      {this.state.isHidden && (
-                        <input
-                          type="text"
-                          id="other"
-                          onChange={this.onChange.bind(this)}
-                          name="problem"
-                          placeholder="Other Problem"
-                          style={{ width: "140px" }}
-                          className="form-control"
-                        />
-                      )}
                     </div>
                   </div>
                 </div>

@@ -75,7 +75,7 @@
   border: 1px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
-  top: -90%;
+  top: -50%;
   position: relative;
 }
 input:checked + span {
@@ -119,6 +119,10 @@ footer {
 .Review_main {
   margin: 0 auto;
   max-width: 900px;
-  height: 100vh;
-  overflow-y: scroll;
+  /* height: 100vh;
+  overflow-y: scroll; */
 }
+/* .first {
+  max-width: 700px;
+  padding-left: 500px;
+} */

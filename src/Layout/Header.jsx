@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../index.css";
+import logo from "../img/AskTheClient.png";
 // import Logo from "../img/Logo.png";
 
 class Header extends Component {
@@ -20,19 +21,24 @@ class Header extends Component {
         {localStorage.getItem("Token") ? (
           <nav className="navbar navbar-expand-lg navbar-dark  fixed top-header">
             <a
-              className="navbar-brand"
+              className="navbar-brand logo_text font-weight-bolder"
               href="/"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              style={{ color: "rebeccapurple" }}
             >
-              Logo
+              <img
+                src={logo}
+                alt="Logo"
+                style={{ width: "200px", height: "60px" }}
+              />
             </a>
             <button
               className="navbar-toggler font-weight-bold text-white  "
-              style={{ background: "#b71c1c", padding: "2px", width: "70px" }}
+              style={{ background: "#38d39f", padding: "2px", width: "70px" }}
               type="button"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"

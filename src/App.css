@@ -82,6 +82,20 @@ select.minimal:focus {
   width: 190px;
 } */
 
+.logo_text {
+  font-family: "Lobster", cursive;
+  font-weight: 300;
+  font-size: 2rem;
+  color: rebeccapurple;
+  text-align: left;
+}
+
+input[type="text"] {
+  background: none;
+  outline: 0;
+  /* border: 0; */
+}
+
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
