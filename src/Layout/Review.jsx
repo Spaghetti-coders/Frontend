@@ -480,19 +480,19 @@ export class Review extends Component {
                           <input
                             type="radio"
                             onChange={this.onChange.bind(this)}
-                            value="5"
+                            value="1"
                             name="question1"
                           />
-                          <span>5</span>
+                          <span>1</span>
                         </label>
                         <label className="rick">
                           <input
                             type="radio"
                             onChange={this.onChange.bind(this)}
-                            value="4"
+                            value="2"
                             name="question1"
                           />
-                          <span>4</span>
+                          <span>2</span>
                         </label>
                         <label className="rick">
                           <input
@@ -507,19 +507,19 @@ export class Review extends Component {
                           <input
                             type="radio"
                             onChange={this.onChange.bind(this)}
-                            value="2"
+                            value="4"
                             name="question1"
                           />
-                          <span>2</span>
+                          <span>4</span>
                         </label>
                         <label className="rick">
                           <input
                             type="radio"
-                            value="1"
+                            value="5"
                             onChange={this.onChange.bind(this)}
                             name="question1"
                           />
-                          <span>1</span>
+                          <span>5</span>
                         </label>
                       </div>
                     </div>
@@ -535,29 +535,11 @@ export class Review extends Component {
                         <label className>
                           <input
                             type="radio"
-                            value="5"
+                            value="1"
                             onChange={this.onChange.bind(this)}
                             name="select"
                           />
-                          <span>5</span>
-                        </label>
-                        <label>
-                          <input
-                            type="radio"
-                            onChange={this.onChange.bind(this)}
-                            name="question2"
-                            value="4"
-                          />
-                          <span>4</span>
-                        </label>
-                        <label>
-                          <input
-                            type="radio"
-                            onChange={this.onChange.bind(this)}
-                            name="question2"
-                            value="3"
-                          />
-                          <span>3</span>
+                          <span>1</span>
                         </label>
                         <label>
                           <input
@@ -573,9 +555,27 @@ export class Review extends Component {
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question2"
-                            value="1"
+                            value="3"
                           />
-                          <span>1</span>
+                          <span>3</span>
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            onChange={this.onChange.bind(this)}
+                            name="question2"
+                            value="4"
+                          />
+                          <span>4</span>
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            onChange={this.onChange.bind(this)}
+                            name="question2"
+                            value="5"
+                          />
+                          <span>5</span>
                         </label>
                       </div>
                     </div>
@@ -593,18 +593,18 @@ export class Review extends Component {
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question3"
-                            value="5"
+                            value="1"
                           />
-                          <span>5</span>
+                          <span>1</span>
                         </label>
                         <label>
                           <input
                             type="radio"
-                            value="4"
+                            value="2"
                             onChange={this.onChange.bind(this)}
                             name="question3"
                           />
-                          <span>4</span>
+                          <span>2</span>
                         </label>
                         <label>
                           <input
@@ -620,18 +620,18 @@ export class Review extends Component {
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question3"
-                            value="2"
+                            value="4"
                           />
-                          <span>2</span>
+                          <span>4</span>
                         </label>
                         <label>
                           <input
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question3"
-                            value="1"
+                            value="5"
                           />
-                          <span>1</span>
+                          <span>5</span>
                         </label>
                       </div>
                     </div>
@@ -649,18 +649,18 @@ export class Review extends Component {
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question4"
-                            value="5"
+                            value="1"
                           />
-                          <span>5</span>
+                          <span>1</span>
                         </label>
                         <label>
                           <input
                             type="radio"
                             onChange={this.onChange.bind(this)}
                             name="question4"
-                            value="4"
+                            value="2"
                           />
-                          <span>4</span>
+                          <span>2</span>
                         </label>
                         <label>
                           <input
@@ -677,18 +677,18 @@ export class Review extends Component {
                             onChange={this.onChange.bind(this)}
                             id="id"
                             name="question4"
-                            value="2"
+                            value="4"
                           />
-                          <span>2</span>
+                          <span>4</span>
                         </label>
                         <label>
                           <input
                             type="radio"
-                            value="1"
+                            value="5"
                             name="question4"
                             onChange={this.onChange.bind(this)}
                           />
-                          <span>1</span>
+                          <span>5</span>
                         </label>
                       </div>
                     </div>

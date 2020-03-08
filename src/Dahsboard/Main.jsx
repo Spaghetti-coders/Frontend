@@ -57,7 +57,7 @@ export class Main extends Component {
               <Rating />
             </div>
           </div>
-
+          {/* 
           <div className="row" style={{ width: "100%" }}>
             <div className="col-md-7">
               <Grouped />
@@ -65,11 +65,11 @@ export class Main extends Component {
             <div className="col-md-5">
               <Area />
             </div>
-          </div>
-
-          {/* <div className="time_line">
-            <TimeLine />
           </div> */}
+
+          <div className="time_line">
+            <TimeLine />
+          </div>
           <div className="radar_line">
             <Recommend />
           </div>
