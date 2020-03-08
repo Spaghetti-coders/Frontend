@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Swal from "sweetalert2";
+import moment from "moment";
 import axios from "axios";
 import "./Review.css";
 
@@ -18,9 +19,34 @@ export class Review extends Component {
 
       // questions5: null,
       rating: null,
-      value: ""
+      value: "",
+      days: undefined,
+      hours: undefined,
+      minutes: undefined,
+      seconds: undefined
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      const { timeTillDate, timeFormat } = this.props;
+      const then = moment(timeTillDate, timeFormat);
+      const now = moment();
+      const countdown = moment(then - now);
+      const days = countdown.format("D");
+      const hours = countdown.format("HH");
+      const minutes = countdown.format("mm");
+      const seconds = countdown.format("ss");
+
+      this.setState({ days, hours, minutes, seconds });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   toggle() {
@@ -97,6 +123,7 @@ export class Review extends Component {
   render() {
     return (
       <div className="Review_main" style={{ marginTop: "20px" }}>
+        {/* {localStorage.getItem("Token") ? ( */}
         <div className="box" style={{ paddingBottom: "40px" }}>
           <form style={{ width: "100%" }} onSubmit={this.handleSubmit}>
             <div>
@@ -721,6 +748,21 @@ export class Review extends Component {
             )}
           </form>
         </div>
+        {/* // ) : (
+        //   <div
+        //     className="box"
+        //     style={{
+        //       position: "absolute",
+        //       top: "10%",
+        //       left: "10%",
+        //       padding: "30px"
+        //     }}
+        //   >
+        //     <h1 className="">
+        //       Ankieta została zakończona. Serdecznie dziękujemy!!{" "}
+        //     </h1>
+        //   </div>
+        // )} */}
       </div>
     );
   }

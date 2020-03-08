@@ -89,7 +89,7 @@ class Rating extends Component {
           }
         ],
         title: {
-          text: "Total Answers: 521",
+          text: "Total Answers: 31",
           align: "center",
           style: {
             fontSize: "20px",
@@ -101,7 +101,7 @@ class Rating extends Component {
       series: [
         {
           name: "Ratiings",
-          data: [10, 20, 39, 35, 25, 33, 85, 90, 59, 83, 93]
+          data: [3, 3, 9, 3, 3, 3, 3, 3, 9, 29, 32]
         }
       ]
     };

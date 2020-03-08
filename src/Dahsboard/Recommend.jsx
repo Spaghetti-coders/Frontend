@@ -9,7 +9,7 @@ export class Recommend extends Component {
       series: [
         {
           name: "Communication",
-          data: [100, 50, 30]
+          data: [55, 49, 35, 35]
         }
         // {
         //   name: "Deadlines",
@@ -51,7 +51,7 @@ export class Recommend extends Component {
           size: 0
         },
         xaxis: {
-          categories: ["Communication", "Deadline", "Business"]
+          categories: ["lokalizacja", "komunikacja", "posiłki", "atmosfera"]
         }
       }
     };
@@ -91,41 +91,17 @@ export class Recommend extends Component {
 
               <div className="comment ">
                 <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 9</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                  <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
+                  &nbsp; Komunikacja
                 </p>
 
                 <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 9</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                  <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
+                  &nbsp; Sprowadzić więcej samotnych informatyków
                 </p>
                 <p className="box text-left" style={{ padding: "15px" }}>
                   <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 8</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 7</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 6</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 5</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 4</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
-                </p>
-                <p className="box text-left" style={{ padding: "15px" }}>
-                  <span style={{ opacity: "0.7" }}>March 3</span> &nbsp; |
-                  &nbsp; Heellelelellelelelellelelelelellelelellele
+                  &nbsp; Hello Nice to have
                 </p>
               </div>
             </div>

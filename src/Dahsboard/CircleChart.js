@@ -74,7 +74,7 @@ export class CircleChart extends Component {
               },
               value: {
                 formatter: function(val) {
-                  return parseInt(val) / 10;
+                  return parseInt(val) + "%";
                 },
                 color: "#111",
                 offsetY: -10,
@@ -104,7 +104,7 @@ export class CircleChart extends Component {
         },
         labels: ["NPS score"]
       },
-      series: [51]
+      series: [37]
     };
   }
 
@@ -119,9 +119,9 @@ export class CircleChart extends Component {
           height="300"
         />
         <div className="grade text-center" style={{ marginTop: "-45px" }}>
-          <p className="prcentage_part">Good : 80%</p>
-          <p className="prcentage_part">Passive : 80%</p>
-          <p className="prcentage_part">Something : 80%</p>
+          <p className="prcentage_part">Promoter : 62%</p>
+          <p className="prcentage_part">Passive : 13%</p>
+          <p className="prcentage_part">Detractors : 25%</p>
         </div>
       </div>
     );
