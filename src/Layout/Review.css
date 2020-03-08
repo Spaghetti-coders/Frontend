@@ -1,19 +1,28 @@
 .btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   padding: 10px 16px;
   border-radius: 35px;
   font-size: 24px;
   line-height: 1.33;
 }
 .jj {
-  margin-left: 30px;
-}
+  width: 15%;
 
+  margin-left: 10px;
+}
+@media only screen and (max-width: 580px) {
+  .container1 {
+    width: 15%;
+    margin-left: 100px;
+  }
+}
 .boxed label {
   display: inline-block;
-  width: 200px;
+  width: 140px;
+  padding-left: -60px;
   padding: 10px;
+  margin: 0 auto;
   border: solid 2px #ccc;
   transition: all 0.3s;
   border: 1px solid gray;
@@ -30,6 +39,12 @@
   color: white;
   font-weight: bolder;
   text-align: center;
+}
+
+.submit {
+  background-color: #38d39f;
+  width: 170px;
+  padding: 10px;
 }
 
 .gond label {
@@ -51,19 +66,13 @@
   position: relative;
 }
 input:checked + span {
-  background: #ccf;
-  border-color: #ccf;
+  background: #38d39f;
+  border-color: #38d39f;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
 }
 
-/* .btn-circle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.42857;
-} */
 .fff {
   margin: 0 auto;
   padding-left: 100px;
@@ -92,4 +101,9 @@ footer {
 
 .question {
   color: #454a40;
+}
+
+.Review_main {
+  margin: 0 auto;
+  max-width: 900px;
 }
